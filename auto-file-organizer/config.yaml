@@ -1,0 +1,12 @@
+source_folder: C:/Users/Justinboyd/Downloads
+target_folder: C:/Users/Justinboyd/OrganizedFiles
+
+file_types:
+  .pdf: Documents
+  .docx: Documents
+  .txt: Text
+  .png: Images
+  .jpg: Images
+  .zip: Archives
+  .mp3: Audio
+  .xlsx: Spreadsheets
