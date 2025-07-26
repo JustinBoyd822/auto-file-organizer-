@@ -30,3 +30,40 @@ file_types:
   .zip: Archives
   .mp3: Audio
   .xlsx: Spreadsheets
+The script will:
+
+Create subfolders in your source folder for each file type
+Move files into their appropriate folders
+Log all operations to log/run.log
+
+Example
+Before running:
+Downloads/
+├── document.pdf
+├── photo.jpg
+├── music.mp3
+└── spreadsheet.xlsx
+After running:
+Downloads/
+├── Documents/
+│   └── document.pdf
+├── Images/
+│   └── photo.jpg
+├── Audio/
+│   └── music.mp3
+└── Spreadsheets/
+    └── spreadsheet.xlsx
+Logging
+All file operations are logged in log/run.log with timestamps. Check this file to see what files were moved or if there were any issues.
+Adding New File Types
+To support additional file types, simply add them to the file_types section in config.yaml:
+yamlfile_types:
+  .pdf: Documents
+  .mp4: Videos
+  .py: Code
+  # Add more as needed
+Notes
+
+Files with extensions not listed in the config will remain in the source folder
+The script creates folders as needed - you don't need to create them manually
+All operations are logged for your reference
