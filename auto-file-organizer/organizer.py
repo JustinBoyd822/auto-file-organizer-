@@ -1,10 +1,8 @@
-import argparse
 import logging
 import os
 import shutil
 import yaml
 from pathlib import Path
-
 
 os.makedirs("log", exist_ok=True)
 
