@@ -1,25 +1,34 @@
-Auto File Organizer
-A simple Python script that automatically organizes files in your Downloads folder by creating subfolders based on file types.
-Features
+# 🗂️ Auto File Organizer
 
-Organizes files by extension into categorized folders
-Configurable file type mappings via YAML
-Detailed logging of all file operations
-Works directly within your Downloads folder (in-place organization)
+A simple Python script to automatically organize files in a folder based on file type, using a customizable YAML configuration.
 
-Installation
+## 📁 What It Does
 
-Clone or download this repository
-Install the required dependencies:
-bash
-Configuration
-Edit the config.yaml file to customize:
+This script scans a specified folder and automatically moves files into subfolders based on their extensions. For example, all `.pdf` files can be moved into a `Documents` folder, `.jpg` files into an `Images` folder, and so on.
 
-source_folder: The folder to organize (e.g., your Downloads folder)
-file_types: Mapping of file extensions to folder names
+## ✅ Features
 
-Example configuration:
-source_folder: C:/Users/YourName/Downloads
+- Organizes files based on extension
+- Customizable config using YAML
+- Automatically creates missing folders
+- Logs actions to a file
+- Cross-platform (Linux, macOS, Windows)
+
+---
+
+## ⚙️ How It Works
+
+1. The script loads settings from a `config.yaml` file.
+2. It checks the `source_folder` and scans all files inside it.
+3. Based on the `file_types` mapping, files are moved into the appropriate subfolder.
+4. A log of all moved and skipped files is saved in the `/log` directory.
+
+---
+
+## 📝 Example `config.yaml`
+
+```yaml
+source_folder: /path/to/your/source/folder
 
 file_types:
   .pdf: Documents
@@ -30,40 +39,40 @@ file_types:
   .zip: Archives
   .mp3: Audio
   .xlsx: Spreadsheets
-The script will:
 
-Create subfolders in your source folder for each file type
-Move files into their appropriate folders
-Log all operations to log/run.log
+Change /path/to/your/source/folder to the directory you want to organize.
+🚀 Getting Started
+1. Clone the repo
 
-Example
-Before running:
-Downloads/
-├── document.pdf
-├── photo.jpg
-├── music.mp3
-└── spreadsheet.xlsx
-After running:
-Downloads/
-├── Documents/
-│   └── document.pdf
-├── Images/
-│   └── photo.jpg
-├── Audio/
-│   └── music.mp3
-└── Spreadsheets/
-    └── spreadsheet.xlsx
-Logging
-All file operations are logged in log/run.log with timestamps. Check this file to see what files were moved or if there were any issues.
-Adding New File Types
-To support additional file types, simply add them to the file_types section in config.yaml:
-yamlfile_types:
-  .pdf: Documents
-  .mp4: Videos
-  .py: Code
-  # Add more as needed
-Notes
+git clone https://github.com/yourusername/auto-file-organizer.git
+cd auto-file-organizer
 
-Files with extensions not listed in the config will remain in the source folder
-The script creates folders as needed - you don't need to create them manually
-All operations are logged for your reference
+2. Install requirements
+
+pip install -r requirements.txt
+
+3. Run the script
+
+python organizer.py
+
+📦 Requirements
+
+    Python 3.6+
+
+    PyYAML
+
+Install with:
+
+pip install pyyaml
+
+📄 Logs
+
+All activity is saved to a log file in the log/ directory:
+
+log/run.log
+
+💡 Tips
+
+    Add or remove file types in the config.yaml to suit your needs.
+
+    Schedule this script with Task Scheduler (Windows) or cron (Linux/macOS) for automatic cleanup.
