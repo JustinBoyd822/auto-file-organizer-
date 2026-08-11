@@ -1,12 +1,12 @@
-# 🗂️ Auto File Organizer
+# Auto File Organizer
 
 A simple Python script to automatically organize files in a folder based on file type, using a customizable YAML configuration.
 
-## 📁 What It Does
+## What It Does
 
 This script scans a specified folder and automatically moves files into subfolders based on their extensions. For example, all `.pdf` files can be moved into a `Documents` folder, `.jpg` files into an `Images` folder, and so on.
 
-## ✅ Features
+## Features
 
 - Organizes files based on extension
 - Customizable config using YAML
@@ -16,7 +16,7 @@ This script scans a specified folder and automatically moves files into subfolde
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. The script loads settings from a `config.yaml` file.
 2. It checks the `source_folder` and scans all files inside it.
@@ -25,7 +25,7 @@ This script scans a specified folder and automatically moves files into subfolde
 
 ---
 
-## 📝 Example `config.yaml`
+## Example `config.yaml`
 
 ```yaml
 source_folder: /path/to/your/source/folder
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 python organizer.py
 
-📦 Requirements
+ Requirements
 
     Python 3.6+
 
@@ -65,13 +65,13 @@ Install with:
 
 pip install pyyaml
 
-📄 Logs
+ Logs
 
 All activity is saved to a log file in the log/ directory:
 
 log/run.log
 
-💡 Tips
+ Tips
 
     Add or remove file types in the config.yaml to suit your needs.
 
